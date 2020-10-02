@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Connexion à Firebase</title>
+</head>
+<body>
+
+    <div class="cont-btns">
+        <button class="btn-inscription">S'inscrire</button>
+        <button class="btn-connection">Se connecter</button>
+        <button class="btn-deco">Se deconnecter</button>
+    </div>
+
+    <h1>Bienvenue, inscrivez-vous ou connecter-vous.</h1>
+    <p class="info">Contenu public</p>
+    
+    <form class="form-connection">
+        <h2>Connection</h2>
+        <label for="emailConnection">Entrez un email</label>
+        <input type="email" class="email-connection" id="emailConnection">
+
+        <label for="mdpConnection">Entrez un mdp</label>
+        <input type="password" class="mdp-connection" id="mdpConnection">
+
+        <button class="submit">S'inscrire</button>
+    </form>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAm74Yy7EI4P7soI6PYVPG_3g509rqty1k",
+            authDomain: "authentification-js-7adcf.firebaseapp.com",
+            databaseURL: "https://authentification-js-7adcf.firebaseio.com",
+            projectId: "authentification-js-7adcf",
+            storageBucket: "authentification-js-7adcf.appspot.com",
+            messagingSenderId: "976332239170",
+            appId: "1:976332239170:web:e52d9e525e8269abc518db"
+        };
+    // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
